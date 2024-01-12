@@ -9,5 +9,18 @@
         android:id="@+id/landing"
         android:name="com.example.fattclicker3.landing"
         android:label="fragment_landing"
-        tools:layout="@layout/fragment_landing" />
+        tools:layout="@layout/fragment_landing" >
+        <action
+            android:id="@+id/action_landing_to_shop"
+            app:destination="@id/shop" />
+    </fragment>
+    <fragment
+        android:id="@+id/shop"
+        android:name="com.example.fattclicker3.shop"
+        android:label="fragment_shop"
+        tools:layout="@layout/fragment_shop" >
+        <action
+            android:id="@+id/action_shop_self"
+            app:destination="@id/shop" />
+    </fragment>
 </navigation>
