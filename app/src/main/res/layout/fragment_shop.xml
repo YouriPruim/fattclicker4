@@ -65,7 +65,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="5 euro"
+                    android:text="€ 2,99"
                     android:textAlignment="center"
                     android:textSize="16sp" />
 
@@ -74,7 +74,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="5 euro"
+                    android:text="€ 4,99"
                     android:textAlignment="center" />
 
                 <TextView
@@ -82,7 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="5 euro"
+                    android:text="€ 0,99"
                     android:textAlignment="center" />
             </TableRow>
 
@@ -122,7 +122,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="5 euro"
+                    android:text="€ 9,99"
                     android:textAlignment="center" />
 
                 <TextView
@@ -130,7 +130,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="5 euro"
+                    android:text="€ 49.99"
                     android:textAlignment="center" />
 
                 <TextView
@@ -138,7 +138,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="5 euro"
+                    android:text="€ 99,99"
                     android:textAlignment="center" />
             </TableRow>
         </TableLayout>
