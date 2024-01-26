@@ -48,6 +48,9 @@ class landing : Fragment() {
             view.findViewById<ImageButton>(R.id.imageButton8).setOnClickListener {
                 //Use the navigation tree in the current view to navigate to the next page
                 Navigation.findNavController(view).navigate(R.id.action_landing_to_shop)
+
+
+
             }
         }
 
