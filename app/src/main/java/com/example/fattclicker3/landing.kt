@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.navigation.Navigation
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -43,6 +44,11 @@ class landing : Fragment() {
                 kilo = kilo + 0.1
             view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
 
+            //find the button and set its onclick
+            view.findViewById<ImageButton>(R.id.imageButton8).setOnClickListener {
+                //Use the navigation tree in the current view to navigate to the next page
+                Navigation.findNavController(view).navigate(R.id.action_landing_to_shop)
+            }
         }
 
         return view

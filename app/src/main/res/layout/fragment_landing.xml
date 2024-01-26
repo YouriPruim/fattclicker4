@@ -18,7 +18,7 @@
 
         <ImageButton
             android:id="@+id/imageButton8"
-            android:layout_width="59dp"
+            android:layout_width="66dp"
             android:layout_height="64dp"
             android:scaleType="fitXY"
             android:src="@drawable/_981011" />
