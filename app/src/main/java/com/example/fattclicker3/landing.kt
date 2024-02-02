@@ -69,6 +69,12 @@ class landing : Fragment() {
             view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
         }
 
+        view.findViewById<ImageButton>(R.id.imageButton).setOnClickListener {
+            kilo = kilo + 1000000.0
+            view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
+        }
+
+
 
 
 
