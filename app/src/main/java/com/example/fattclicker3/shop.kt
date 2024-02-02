@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 
 // TODO: Rename parameter arguments, choose names that match
@@ -46,6 +47,8 @@ class shop : Fragment() {
         //find the button and set its onclick
         view.findViewById<ImageButton>(R.id.imageButton4).setOnClickListener {
             //Use the navigation tree in the current view to navigate to the next page
+            val kilo = arguments?.getString("kilo", "1")
+            val bundle = bundleOf("kilo" to kilo)
             Navigation.findNavController(view).navigate(R.id.landing)
         }
 

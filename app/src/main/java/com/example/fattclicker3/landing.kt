@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 
 // TODO: Rename parameter arguments, choose names that match
@@ -41,6 +42,7 @@ class landing : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_landing, container, false)
 
+
         view.findViewById<ImageButton>(R.id.imageButton6).setOnClickListener {
             kilo = kilo + 0.1
             view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
@@ -49,7 +51,9 @@ class landing : Fragment() {
         //find the button and set its onclick
         view.findViewById<ImageButton>(R.id.imageButton8).setOnClickListener {
             //Use the navigation tree in the current view to navigate to the next page
-            Navigation.findNavController(view).navigate(R.id.action_landing_to_shop)
+
+            val bundle = bundleOf("kilo" to kilo)
+            Navigation.findNavController(view).navigate(R.id.action_landing_to_shop, bundle)
 
         }
 
