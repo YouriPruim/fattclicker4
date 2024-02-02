@@ -40,24 +40,45 @@ class landing : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_landing, container, false)
+
         view.findViewById<ImageButton>(R.id.imageButton6).setOnClickListener {
-                kilo = kilo + 0.1
+            kilo = kilo + 0.1
+            view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
+        }
+
+        //find the button and set its onclick
+        view.findViewById<ImageButton>(R.id.imageButton8).setOnClickListener {
+            //Use the navigation tree in the current view to navigate to the next page
+            Navigation.findNavController(view).navigate(R.id.action_landing_to_shop)
+
+        }
+
+        view.findViewById<ImageButton>(R.id.imageButton3).setOnClickListener {
+            kilo = kilo + 5.0
             view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
 
-            //find the button and set its onclick
-            view.findViewById<ImageButton>(R.id.imageButton8).setOnClickListener {
-                //Use the navigation tree in the current view to navigate to the next page
-                Navigation.findNavController(view).navigate(R.id.action_landing_to_shop)
-
-
-
-            }
         }
+
+        view.findViewById<ImageButton>(R.id.imageButton2).setOnClickListener {
+            kilo = kilo + 10.0
+            view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
+        }
+
+        view.findViewById<ImageButton>(R.id.imageButton5).setOnClickListener {
+            kilo = kilo + 25.0
+            view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
+        }
+
+
+
+
+
 
         return view
     }
 
-    companion object {
+        val companion = Unit
+        companion object {
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
