@@ -26,6 +26,7 @@ class landing : Fragment() {
     private var param2: String? = null
 
     var kilo = 0.0
+    fun setup =
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +42,10 @@ class landing : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_landing, container, false)
+
+
+        setup(view)
+
 
 
         view.findViewById<ImageButton>(R.id.imageButton6).setOnClickListener {
@@ -77,11 +82,21 @@ class landing : Fragment() {
             kilo = kilo + 1000000.0
             view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
         }
+        //find the button and set its onclick
+        view.findViewById<ImageButton>(R.id.imageButton10).setOnClickListener {
+            //Use the navigation tree in the current view to navigate to the next page
+
+            val bundle = bundleOf("kilo" to kilo)
+            Navigation.findNavController(view).navigate(R.id.instellingen , bundle)
+
+
+        }
 
 
 
 
 
+        view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
 
 
         return view

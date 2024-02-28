@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_landing_to_shop"
             app:destination="@id/shop" />
+        <action
+            android:id="@+id/action_landing_to_shop2"
+            app:destination="@id/shop" />
     </fragment>
     <fragment
         android:id="@+id/shop"
@@ -23,4 +26,9 @@
             android:id="@+id/action_shop_self"
             app:destination="@id/shop" />
     </fragment>
+    <fragment
+        android:id="@+id/instellingen"
+        android:name="com.example.fattclicker3.instellingen"
+        android:label="fragment_instellingen"
+        tools:layout="@layout/fragment_instellingen" />
 </navigation>
