@@ -49,7 +49,7 @@ class shop : Fragment() {
             //Use the navigation tree in the current view to navigate to the next page
             val kilo = arguments?.getString("kilo", "1")
             val bundle = bundleOf("kilo" to kilo)
-            Navigation.findNavController(view).navigate(R.id.landing)
+            Navigation.findNavController(view).navigateUp()
         }
 
 

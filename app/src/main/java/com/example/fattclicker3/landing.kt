@@ -1,5 +1,6 @@
 package com.example.fattclicker3
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -26,7 +27,10 @@ class landing : Fragment() {
     private var param2: String? = null
 
     var kilo = 0.0
-    fun setup =
+
+fun setup (view: View) {
+    view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
+}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +46,8 @@ class landing : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_landing, container, false)
+        val mediaPlayer = MediaPlayer.create(context, R.raw.europapa)
+            mediaPlayer.start()
 
 
         setup(view)
@@ -58,6 +64,7 @@ class landing : Fragment() {
             //Use the navigation tree in the current view to navigate to the next page
 
             val bundle = bundleOf("kilo" to kilo)
+            mediaPlayer.pause()
             Navigation.findNavController(view).navigate(R.id.action_landing_to_shop, bundle)
 
         }
@@ -78,10 +85,7 @@ class landing : Fragment() {
             view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
         }
 
-        view.findViewById<ImageButton>(R.id.imageButton).setOnClickListener {
-            kilo = kilo + 1000000.0
-            view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
-        }
+
         //find the button and set its onclick
         view.findViewById<ImageButton>(R.id.imageButton10).setOnClickListener {
             //Use the navigation tree in the current view to navigate to the next page
@@ -91,6 +95,7 @@ class landing : Fragment() {
 
 
         }
+
 
 
 
