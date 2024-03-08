@@ -10,6 +10,8 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
+import java.math.RoundingMode
+import java.text.DecimalFormat
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -50,13 +52,17 @@ fun setup (view: View) {
             mediaPlayer.start()
 
 
+
         setup(view)
 
 
 
         view.findViewById<ImageButton>(R.id.imageButton6).setOnClickListener {
             kilo = kilo + 0.1
-            view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
+            val df = DecimalFormat("#.#")//set decimal format here
+            df.roundingMode = RoundingMode.CEILING
+            println(df.format(kilo))
+            view.findViewById<TextView>(R.id.kilo_getal).text = df.format(kilo).toString()
         }
 
         //find the button and set its onclick
@@ -71,17 +77,26 @@ fun setup (view: View) {
 
         view.findViewById<ImageButton>(R.id.imageButton3).setOnClickListener {
             kilo = kilo + 5.0
+            val df = DecimalFormat("#.#")//set decimal format here
+            df.roundingMode = RoundingMode.CEILING
+            println(df.format(kilo))
             view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
 
         }
 
         view.findViewById<ImageButton>(R.id.imageButton2).setOnClickListener {
             kilo = kilo + 10.0
+            val df = DecimalFormat("#.#")//set decimal format here
+            df.roundingMode = RoundingMode.CEILING
+            println(df.format(kilo))
             view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
         }
 
         view.findViewById<ImageButton>(R.id.imageButton5).setOnClickListener {
             kilo = kilo + 25.0
+            val df = DecimalFormat("#.#")//set decimal format here
+            df.roundingMode = RoundingMode.CEILING
+            println(df.format(kilo))
             view.findViewById<TextView>(R.id.kilo_getal).text = kilo.toString()
         }
 
