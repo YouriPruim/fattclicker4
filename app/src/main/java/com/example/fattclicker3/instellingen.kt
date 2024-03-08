@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import androidx.core.os.bundleOf
+import androidx.navigation.Navigation
+
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -28,11 +32,31 @@ class instellingen : Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_instellingen, container, false)
+        val view = inflater.inflate(R.layout.fragment_instellingen, container, false)
+
+        //find the button and set its onclick
+        view.findViewById<ImageButton>(R.id.imageButton7).setOnClickListener {
+            //Use the navigation tree in the current view to navigate to the next page
+            val kilo = arguments?.getString("kilo", "1")
+            val bundle = bundleOf("kilo" to kilo)
+            Navigation.findNavController(view).navigateUp()
+        }
+
+
+
+
+        return view
     }
+
+
+
+
+
 
     companion object {
         /**

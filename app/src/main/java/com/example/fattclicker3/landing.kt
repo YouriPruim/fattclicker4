@@ -91,7 +91,8 @@ fun setup (view: View) {
             //Use the navigation tree in the current view to navigate to the next page
 
             val bundle = bundleOf("kilo" to kilo)
-            Navigation.findNavController(view).navigate(R.id.instellingen , bundle)
+            mediaPlayer.pause()
+            Navigation.findNavController(view).navigate(R.id.instellingen, bundle)
 
 
         }
