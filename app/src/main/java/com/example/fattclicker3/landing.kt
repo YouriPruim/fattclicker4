@@ -59,6 +59,12 @@ fun setup (view: View) {
 
         view.findViewById<ImageButton>(R.id.imageButton6).setOnClickListener {
             kilo = kilo + 0.1
+            if(kilo = 100 && kilo >= 85) {
+                // red
+            } else if(kilo =100 && kilo )
+
+            }
+            ...
             val df = DecimalFormat("#.#")//set decimal format here
             df.roundingMode = RoundingMode.CEILING
             println(df.format(kilo))
