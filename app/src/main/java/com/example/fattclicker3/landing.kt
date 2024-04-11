@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 import java.math.RoundingMode
@@ -59,12 +60,14 @@ fun setup (view: View) {
 
         view.findViewById<ImageButton>(R.id.imageButton6).setOnClickListener {
             kilo = kilo + 0.1
-            if(kilo = 100 && kilo >= 85) {
-                // red
-            } else if(kilo =100 && kilo )
+            if(kilo > 0.2 ) {
+                view.findViewById<ConstraintLayout>(R.id.game_bg).setBackgroundResource(R.drawable.modderpoel)
 
+                if(kilo > 0.8 )
+                    view.findViewById<ConstraintLayout>(R.id.game_bg).setBackgroundResource(R.drawable.varkensstal)
+                if(kilo > 1.2 )
+                    view.findViewById<ConstraintLayout>(R.id.game_bg).setBackgroundResource(R.drawable.zinkgat)
             }
-            ...
             val df = DecimalFormat("#.#")//set decimal format here
             df.roundingMode = RoundingMode.CEILING
             println(df.format(kilo))
